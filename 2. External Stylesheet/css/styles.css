@@ -1,7 +1,7 @@
 /* Color Palette */
 /* #F2F5F0; White Smoke */
-/* #98B6C8; Light Steel Blue */  
-/* #24536F; Dark Slate Blue */
+/* #98B6C8; Light Steel Blue */
+/* #193A4E; Dark Slate Blue */
 /* #D47527; Chocolate */
 /* #BB2278; Medium Violet Red */
 
@@ -10,6 +10,8 @@
 /* Fredoka: Title */
 
 body {
+    /* palette base color, shows through where the background image doesn't cover */
+    background-color: #F2F5F0; /* White Smoke */
     /* background image relative to this file */
     background-image: url("../img/background.png");
     /* scales the background */
@@ -22,8 +24,8 @@ body {
     /* defines width of element */
     width: 800px;
     /* styles background and border */
-    background: lightblue;
-    border: 4px solid white; /* this is a 4px thick, solid (not dashed), white border*/
+    background: #98B6C8; /* Light Steel Blue */
+    border: 4px solid #F2F5F0; /* White Smoke */
     border-radius: 10px;
     /* this makes so the width's border is counted in the height, removing the scrollbar in the body  */
     box-sizing: border-box;
@@ -34,10 +36,12 @@ body {
 h1 {
   font-family: "Fredoka", sans-serif;
   font-weight: 400;
+  color: #D47527; /* Chocolate */
 }
 
 p {
   font-family: "Roboto", sans-serif;
+  color: #193A4E; /* Dark Slate Blue, darkened for readability */
 }
 
 img {
@@ -53,4 +57,9 @@ img {
   font-family: "Roboto", sans-serif;
   /* centers link text horizontally */
   text-align: center;
+  color: #BB2278; /* Medium Violet Red */
+}
+
+#content a:hover {
+  color: #D47527; /* Chocolate */
 }
