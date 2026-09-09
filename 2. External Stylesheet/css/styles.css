@@ -6,7 +6,8 @@
 /* #BB2278; Medium Violet Red */
 
 /* Fonts */
-/* Roboto */
+/* Roboto: text */
+/* Fredoka: title */
 
 body {
     /* background image relative to this file */
@@ -30,5 +31,9 @@ body {
 }
 
 h1 {
+  font-family: "Fredoka", sans-serif;
+}
+
+p {
   font-family: "Roboto", sans-serif;
 }
