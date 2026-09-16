@@ -86,12 +86,11 @@ h1, h2, h3 {
   background: var(--color-primary);
   color: var(--color-light);
 }
-.img-placeholder {
-  background: var(--sky-blue);
-  /* TEMP BORDER */
-  border: 2px solid black;
-  padding: 20px;
-  text-align: center;
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 6px;
 }
 
 
@@ -139,6 +138,9 @@ header {
 .hero-image {
   width: 300px;
 }
+.step-image {
+  width: 100%;
+}
 
 
 /* How It Works
@@ -176,6 +178,10 @@ header {
   width: 45%;
   margin-bottom: 15px;
 }
+.feature-icon {
+  width: 48px;
+  height: 48px;
+}
 
 
 /* Socials
@@ -192,6 +198,10 @@ header {
 }
 .socials-list li {
   margin: 0 10px;
+}
+.social-icon {
+  width: 32px;
+  height: 32px;
 }
 
 
