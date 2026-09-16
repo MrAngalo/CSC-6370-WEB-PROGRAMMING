@@ -5,10 +5,164 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
+        <!-- This adds the external stylesheet -->
         <link rel="stylesheet" href="style/styles.css">
     </head>
     <body>
-        <h1>You Owe Me 15</h1> 
+
+        <!-- // HEADER // -->
+        <header>
+            <div class="content header-content">
+                <!-- Placeholder for logo -->
+                <p class="logo">You Owe Me 15</p>
+                <nav>
+                    <!-- This is the top navigation -->
+                    <ul class="nav-list list-reset">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+                </nav>
+                <!-- This does not do anything right now, when I add a backend then maybe -->
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+        </header>
+        <!-- end of HEADER -->
+
+        <main>
+
+            <!-- // HERO // -->
+            <section class="hero">
+                <div class="content hero-content">
+                    <!-- This section represents the green banner text.
+                    it uses display flex to align horizontally. hero-image has fixed width
+                    so hero-text can expand -->
+                    <div class="hero-text">
+                        <!-- Small pill tag above the headline -->
+                        <p class="eyebrow">Splitting Bills, Simplified</p>
+                        <h1>Stop doing bill math in your head.</h1>
+                        <p>Upload a receipt, tag your friends, and get an instant split.</p>
+                        <a href="#" class="btn">Sign Up Free</a>
+                    </div>
+                    <!-- Placeholder div for sizing of hero image -->
+                    <div class="img-placeholder hero-image">Hero app screenshot</div>
+                </div>
+            </section>
+            <!-- end of HERO -->
+
+            <!-- // HOW IT WORKS // -->
+            <section class="how-it-works">
+                <div class="content">
+                    <h2>How It Works</h2>
+                    <p>Three simple steps to split any bill.</p>
+
+                    <!-- Steps use simple display: flex -->
+                    <div class="steps">
+                        <!-- Step 1 -->
+                        <div class="step-item">
+                            <!-- Placeholder image -->
+                            <div class="img-placeholder step-image">Upload screen</div>
+                            <h3>1. Upload your receipt</h3>
+                            <p>Take a photo or upload from your gallery.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="step-item">
+                            <!-- Placeholder image -->
+                            <div class="img-placeholder step-image">Tag friends screen</div>
+                            <h3>2. Tag your friends</h3>
+                            <p>Assign items to the people in your group.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="step-item">
+                            <!-- Placeholder image -->
+                            <div class="img-placeholder step-image">Split bill screen</div>
+                            <h3>3. Everyone picks their items</h3>
+                            <p>We crunch the numbers and show who owes who.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end of HOW IT WORKS -->
+
+            <!-- // FEATURES // -->
+            <section class="features bg-dark">
+                <!-- This section lists features in a 2x2 grid using flex, it uses
+                flex-wrap to make last two items overflow  -->
+                <div class="content">
+                    <h2>Why You'll Love It</h2>
+                    <p>Simple. Fair. Less awkward.</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <!-- Placeholder Icon -->
+                            <div class="img-placeholder icon-placeholder">Icon</div>
+                            <h3>Itemized Splitting</h3>
+                            <p>Split by individual items, not just totals.</p>
+                        </div>
+                        <div class="feature-item">
+                            <!-- Placeholder Icon -->
+                            <div class="img-placeholder icon-placeholder">Icon</div>
+                            <h3>Tag Friends Directly</h3>
+                            <p>Quickly assign items to your crew.</p>
+                        </div>
+                        <div class="feature-item">
+                            <!-- Placeholder Icon -->
+                            <div class="img-placeholder icon-placeholder">Icon</div>
+                            <h3>Instant Who-Owes-Who</h3>
+                            <p>Get clear, automatic settlements.</p>
+                        </div>
+                        <div class="feature-item">
+                            <!-- Placeholder Icon -->
+                            <div class="img-placeholder icon-placeholder">Icon</div>
+                            <h3>Group Debt Network</h3>
+                            <p>See everyone's balances across all your groups.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end of FEATURES -->
+
+            <!-- // SOCIALS // -->
+            <section class="socials">
+                <div class="content">
+                    <h2>Follow Along</h2>
+                    <p>Tips, updates, and behind the scenes.</p>
+                    <ul class="socials-list list-reset">
+                        <!-- Placeholder, need to find correct social icons -->
+                        <li><div class="img-placeholder icon-placeholder">Instagram</div></li>
+                        <li><div class="img-placeholder icon-placeholder">X</div></li>
+                        <li><div class="img-placeholder icon-placeholder">TikTok</div></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- end of SOCIALS -->
+
+        </main>
+
+        <!-- // FOOTER // -->
+        <footer class="bg-primary">
+            <!-- This footer is split into 3 columns: app name, help links, and copyright -->
+            <div class="content footer-content">
+                <div class="footer-brand">
+                    <p class="logo">You Owe Me 15</p>
+                    <p>Less math. More time together.</p>
+                </div>
+                <!-- Same links as the header nav -->
+                <nav>
+                    <ul class="list-reset">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-legal">
+                    <p>Let's stay connected.</p>
+                    <p class="copyright">&copy; 2026 You Owe Me 15. All rights reserved.</p>
+                    <p><a href="#">Privacy</a> | <a href="#">Terms</a></p>
+                </div>
+            </div>
+        </footer>
+        <!-- end of FOOTER -->
+
     </body>
 </html>

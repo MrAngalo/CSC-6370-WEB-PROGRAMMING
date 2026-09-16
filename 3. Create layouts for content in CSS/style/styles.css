@@ -28,3 +28,177 @@
   --font-size-base:   1rem;
   --font-size-small:  0.8rem;
 }
+
+
+/* Global Styles
+---------------------------------------*/
+
+html {
+  /* box-sizing inheritance trick (Chris Coyier) */
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  /* removes default margin and padding so content is flush to edge */
+  margin: 0;
+  padding: 0;
+  /* sets font + color in body so elements can inherit */
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--color-dark);
+  /* TEMP BORDER */
+  border: 2px solid black;
+}
+/* defines heading font family */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  margin: 0;
+}
+/* I used the same naming scheme as the linkedin course */
+.list-reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.content {
+  width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  /* TEMP BORDER */
+  border: 2px dashed black;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  text-decoration: none;
+  /* TEMP BORDER */
+  border: 2px solid black;
+}
+.bg-dark {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+.bg-primary {
+  background: var(--color-primary);
+  color: var(--color-light);
+}
+.img-placeholder {
+  background: var(--sky-blue);
+  /* TEMP BORDER */
+  border: 2px solid black;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* Header + Nav
+---------------------------------------*/
+header {
+  background: var(--color-light);
+  /* TEMP BORDER */
+  border: 2px solid black;
+}
+/* logo, nav, and sign up button in one row */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-list {
+  display: flex;
+}
+.nav-list li {
+  /* TEMP BORDER */
+  border: 2px solid black;
+  margin: 0 5px;
+}
+
+
+/* Hero
+---------------------------------------*/
+.hero {
+  background: var(--lime-green);
+  /* TEMP BORDER */
+  border: 2px solid black;
+}
+/* text on left, screenshot on right, vertically centered */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-text {
+  /* TEMP BORDER */
+  border: 2px solid black;
+  padding: 10px;
+}
+.hero-image {
+  width: 300px;
+}
+
+
+/* How It Works
+---------------------------------------*/
+.how-it-works {
+  background: var(--cream);
+  /* TEMP BORDER */
+  border: 2px solid black;
+}
+/* 3 steps side by side */
+.steps {
+  display: flex;
+  justify-content: space-between;
+}
+.step-item {
+  /* TEMP BORDER */
+  border: 2px solid black;
+  padding: 10px;
+  width: 30%;
+}
+
+
+/* Features
+---------------------------------------*/
+/* 2x2 cards, wraps to next row once 2 don't fit */
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.feature-item {
+  /* TEMP BORDER */
+  border: 2px solid var(--color-light);
+  padding: 10px;
+  width: 45%;
+  margin-bottom: 15px;
+}
+
+
+/* Socials
+---------------------------------------*/
+.socials {
+  background: var(--color-light);
+  /* TEMP BORDER */
+  border: 2px solid black;
+}
+/* centers the icon row instead of default left-aligned list */
+.socials-list {
+  display: flex;
+  justify-content: center;
+}
+.socials-list li {
+  margin: 0 10px;
+}
+
+
+/* Footer
+---------------------------------------*/
+.footer-content {
+  /* simple horizontal flex with 3 items */
+  display: flex;
+  justify-content: space-between;
+}
