@@ -1,0 +1,30 @@
+/* CUSTOM PROPERTIES
+---------------------------------------*/
+:root {
+  /* palette */
+  --dark-green:   #036D19;
+  --lime-green:   #9BC53D;
+  --dark-teal:    #27474E;
+  --red:          #C3423F;
+  --sky-blue:     #5BC0EB;
+  --cream:        #FAF9F6;
+
+  /* role-based aliases */
+  --color-primary:  var(--dark-green);
+  --color-accent:   var(--lime-green);
+  --color-dark:     var(--dark-teal);
+  --color-light:    var(--cream);
+  --color-warning:  var(--red);
+  --color-info:     var(--sky-blue);
+
+  /* fonts */
+  --font-display: "Lilita One", cursive;
+  --font-heading: "Fredoka", sans-serif;
+  --font-body:    "Nunito Sans", sans-serif;
+
+  /* font sizes */
+  --font-size-hero:   3.5rem;
+  --font-size-h2:     2rem;
+  --font-size-base:   1rem;
+  --font-size-small:  0.8rem;
+}
