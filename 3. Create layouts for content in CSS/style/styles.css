@@ -25,6 +25,7 @@
   /* font sizes */
   --font-size-hero:   3.5rem;
   --font-size-h2:     2rem;
+  --font-size-h3:     1.25rem;
   --font-size-base:   1rem;
   --font-size-small:  0.8rem;
 }
@@ -51,10 +52,21 @@ body {
   /* TEMP BORDER */
   border: 2px solid black;
 }
-/* defines heading font family */
 h1, h2, h3 {
-  font-family: var(--font-heading);
   margin: 0;
+}
+/* big playful display font for the hero headline only */
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-hero);
+}
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+}
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h3);
 }
 /* I used the same naming scheme as the linkedin course */
 .list-reset {
