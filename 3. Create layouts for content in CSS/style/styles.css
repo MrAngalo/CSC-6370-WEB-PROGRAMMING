@@ -55,6 +55,22 @@ body {
 h1, h2, h3 {
   margin: 0;
 }
+a {
+  color: var(--color-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* flips link color to light on the dark features section */
+.bg-dark a {
+  color: var(--color-light);
+}
+/* footer links pop in lime against the dark green footer */
+.bg-primary a {
+  color: var(--color-accent);
+}
 /* big playful display font for the hero headline only */
 h1 {
   font-family: var(--font-display);
