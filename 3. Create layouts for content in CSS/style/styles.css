@@ -28,6 +28,7 @@
   --font-size-h3:     1.25rem;
   --font-size-base:   1rem;
   --font-size-small:  0.8rem;
+  --font-size-step-number: 2.5rem;
 }
 
 
@@ -187,12 +188,39 @@ header {
 .steps {
   display: flex;
   justify-content: space-between;
+  margin-top: 60px;
 }
 .step-item {
   /* TEMP BORDER */
   border: 2px solid black;
   padding: 10px;
   width: 30%;
+  /* anchors .step-number to this box */
+  position: relative;
+}
+/* numbered circle, half overlapping the top of the step image */
+.step-number {
+  /* positions element relative to .step-item */
+  position: absolute;
+  /* bring element to top center */
+  top: 0;
+  left: 50%;
+  /* element is anchored top-right, so shift down and right by half its size */
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  /* border radius of 50% makes it round */
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  border: 3px solid var(--color-primary);
+  /* makes number inside center vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--font-size-step-number);
 }
 
 
