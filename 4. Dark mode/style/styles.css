@@ -29,6 +29,10 @@
   --font-size-base:   1rem;
   --font-size-small:  0.8rem;
   --font-size-step-number: 2.5rem;
+
+  /* theme toggle (light mode) */
+  --toggle-bg:      #FFF6D6;
+  --toggle-border:  #E8A317;
 }
 
 
@@ -274,4 +278,25 @@ header {
 .copyright {
   border-top: 1px solid var(--color-accent);
   padding-top: 10px;
+}
+
+
+/* Theme Toggle
+---------------------------------------*/
+/* fixed pins it to the bottom right of the screen, so it stays there while scrolling */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* card look, colors come from the toggle vars so they swap with the theme */
+  background: var(--toggle-bg);
+  border: 3px solid var(--toggle-border);
+  border-radius: 20px;
+  padding: 8px;
+}
+.theme-icon {
+  /* block removes the small gap under inline images */
+  display: block;
+  width: 48px;
+  height: 48px;
 }
