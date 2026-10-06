@@ -35,6 +35,13 @@
   --toggle-border:  #E8A317;
 }
 
+/* dark mode overrides, javascript adds the dark_mode class to the body */
+.dark_mode {
+  /* theme toggle (dark mode) */
+  --toggle-bg:      #1C2633;
+  --toggle-border:  #8A9BB0;
+}
+
 
 /* Global Styles
 ---------------------------------------*/
@@ -293,6 +300,7 @@ header {
   border: 3px solid var(--toggle-border);
   border-radius: 20px;
   padding: 8px;
+  cursor: pointer;
 }
 .theme-icon {
   /* block removes the small gap under inline images */
