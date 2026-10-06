@@ -308,3 +308,14 @@ header {
   width: 48px;
   height: 48px;
 }
+/* light mode: hide the moon so only the sun shows */
+.icon-moon {
+  display: none;
+}
+/* dark mode: hide the sun and show the moon instead */
+.dark_mode .icon-sun {
+  display: none;
+}
+.dark_mode .icon-moon {
+  display: block;
+}
