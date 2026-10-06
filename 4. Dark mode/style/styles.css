@@ -1,0 +1,277 @@
+/* CUSTOM PROPERTIES
+---------------------------------------*/
+:root {
+  /* palette */
+  --dark-green:   #036D19;
+  --lime-green:   #9BC53D;
+  --dark-teal:    #27474E;
+  --red:          #C3423F;
+  --sky-blue:     #5BC0EB;
+  --cream:        #FAF9F6;
+
+  /* role-based aliases */
+  --color-primary:  var(--dark-green);
+  --color-accent:   var(--lime-green);
+  --color-dark:     var(--dark-teal);
+  --color-light:    var(--cream);
+  --color-warning:  var(--red);
+  --color-info:     var(--sky-blue);
+
+  /* fonts */
+  --font-display: "Lilita One", cursive;
+  --font-heading: "Fredoka", sans-serif;
+  --font-body:    "Nunito Sans", sans-serif;
+
+  /* font sizes */
+  --font-size-hero:   3.5rem;
+  --font-size-h2:     2rem;
+  --font-size-h3:     1.25rem;
+  --font-size-base:   1rem;
+  --font-size-small:  0.8rem;
+  --font-size-step-number: 2.5rem;
+}
+
+
+/* Global Styles
+---------------------------------------*/
+
+html {
+  /* box-sizing inheritance trick (Chris Coyier) */
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  /* removes default margin and padding so content is flush to edge */
+  margin: 0;
+  padding: 0;
+  /* sets font + color in body so elements can inherit */
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--color-dark);
+}
+h1, h2, h3 {
+  margin: 0;
+}
+a {
+  color: var(--color-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* flips link color to light on the dark features section */
+.bg-dark a {
+  color: var(--color-light);
+}
+/* footer links pop in lime against the dark green footer */
+.bg-primary a {
+  color: var(--color-accent);
+}
+/* big playful display font for the hero headline only */
+h1 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-hero);
+}
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+}
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h3);
+}
+/* I used the same naming scheme as the linkedin course */
+.list-reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.content {
+  width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+/* hero CTA: same dark green as the footer, for a bolder pop against the lime hero bg */
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-light);
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: var(--font-size-h3);
+}
+.bg-dark {
+  background: var(--color-dark);
+  color: var(--color-light);
+}
+.bg-primary {
+  background: var(--color-primary);
+  color: var(--color-light);
+}
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+
+/* Header + Nav
+---------------------------------------*/
+header {
+  background: var(--color-light);
+  /* separates header from the hero below it */
+  border-bottom: 2px solid var(--color-dark);
+}
+/* logo, nav, and sign up button in one row */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-list {
+  display: flex;
+}
+.nav-list li {
+  margin: 0 5px;
+}
+/* this adds a divider between nav links without editing html */
+.nav-list li:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px;
+  color: var(--color-dark);
+}
+
+
+/* Hero
+---------------------------------------*/
+.hero {
+  background: var(--lime-green);
+}
+/* text on left, screenshot on right, vertically centered */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.hero-text {
+  border: 5px solid var(--color-dark);
+  border-radius: 20px;
+  padding: 30px;
+}
+.hero-image {
+  width: 300px;
+}
+.step-image {
+  width: 100%;
+}
+
+
+/* How It Works
+---------------------------------------*/
+.how-it-works {
+  background: var(--cream);
+}
+/* 3 steps side by side */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+.step-item {
+  border: 6px solid var(--color-dark);
+  border-radius: 20px;
+  padding: 10px;
+  width: 30%;
+  /* anchors .step-number to this box */
+  position: relative;
+}
+/* numbered circle, half overlapping the top of the step image */
+.step-number {
+  /* positions element relative to .step-item */
+  position: absolute;
+  /* bring element to top center */
+  top: 0;
+  left: 50%;
+  /* element is anchored top-right, so shift down and right by half its size */
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  /* border radius of 50% makes it round */
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  border: 3px solid var(--color-primary);
+  /* makes number inside center vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--font-size-step-number);
+}
+
+
+/* Features
+---------------------------------------*/
+/* 2x2 cards, wraps to next row once 2 don't fit */
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* rounded card outline so each feature stands out against the dark section bg */
+.feature-item {
+  border: 6px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 20px;
+  width: 45%;
+  margin-bottom: 15px;
+}
+.feature-icon {
+  width: 48px;
+  height: 48px;
+}
+
+
+/* Socials
+---------------------------------------*/
+.socials {
+  background: var(--color-light);
+}
+/* centers the icon row instead of default left-aligned list */
+.socials-list {
+  display: flex;
+  justify-content: center;
+}
+.socials-list li {
+  margin: 0 10px;
+}
+.social-icon {
+  width: 64px;
+  height: 64px;
+}
+
+
+/* Footer
+---------------------------------------*/
+.footer-content {
+  /* simple horizontal flex with 3 items */
+  display: flex;
+  justify-content: space-between;
+}
+/* thin lime divider above the copyright line */
+.copyright {
+  border-top: 1px solid var(--color-accent);
+  padding-top: 10px;
+}

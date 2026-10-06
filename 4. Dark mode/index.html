@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <title>You Owe Me 15</title>
+        <!-- This adds the fonts Lilita One, Fredoka, and Nunito Sans from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        <!-- This adds the external stylesheet -->
+        <link rel="stylesheet" href="style/styles.css">
+    </head>
+    <body>
+
+        <!-- // HEADER // -->
+        <header>
+            <div class="content header-content">
+                <p class="logo"><img src="images/icons/brand-mark.svg" alt="" class="brand-mark">You Owe Me 15</p>
+                <nav>
+                    <!-- This is the top navigation -->
+                    <ul class="nav-list list-reset">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+                </nav>
+                <!-- This does not do anything right now, when I add a backend then maybe -->
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+        </header>
+        <!-- end of HEADER -->
+
+        <main>
+
+            <!-- // HERO // -->
+            <section class="hero">
+                <div class="content hero-content">
+                    <!-- This section represents the green banner text.
+                    it uses display flex to align horizontally. hero-image has fixed width
+                    so hero-text can expand -->
+                    <div class="hero-text">
+                        <!-- Small pill tag above the headline -->
+                        <p class="eyebrow">Splitting Bills, Simplified</p>
+                        <h1>Stop doing bill math in your head.</h1>
+                        <p>Upload a receipt, tag your friends, and get an instant split.</p>
+                        <a href="#" class="btn btn-primary">Sign Up Free</a>
+                    </div>
+                    <img src="images/screenshots/hero-app.png" alt="You Owe Me 15 app showing a restaurant receipt split between friends, with Alex owing Sam $8.50" class="hero-image">
+                </div>
+            </section>
+            <!-- end of HERO -->
+
+            <!-- // HOW IT WORKS // -->
+            <section class="how-it-works">
+                <div class="content">
+                    <h2>How It Works</h2>
+                    <p>Three simple steps to split any bill.</p>
+
+                    <!-- Steps use simple display: flex -->
+                    <div class="steps">
+                        <!-- Step 1 -->
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <img src="images/screenshots/step-upload.png" alt="Screen with a dashed outline prompting the user to scan or upload a receipt" class="step-image">
+                            <h3>1. Upload your receipt</h3>
+                            <p>Take a photo or upload from your gallery.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <img src="images/screenshots/step-tag.png" alt="Receipt items with friends' avatars being tagged next to each line" class="step-image">
+                            <h3>2. Tag your friends</h3>
+                            <p>Assign items to the people in your group.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <img src="images/screenshots/step-split.png" alt="Split summary showing who owes who and how much" class="step-image">
+                            <h3>3. Everyone picks their items</h3>
+                            <p>We crunch the numbers and show who owes who.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end of HOW IT WORKS -->
+
+            <!-- // FEATURES // -->
+            <section class="features bg-dark">
+                <!-- This section lists features in a 2x2 grid using flex, it uses
+                flex-wrap to make last two items overflow  -->
+                <div class="content">
+                    <h2>Why You'll Love It</h2>
+                    <p>Simple. Fair. Less awkward.</p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <img src="images/icons/icon-itemized.svg" alt="" class="feature-icon">
+                            <h3>Itemized Splitting</h3>
+                            <p>Split by individual items, not just totals.</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="images/icons/icon-tag.svg" alt="" class="feature-icon">
+                            <h3>Tag Friends Directly</h3>
+                            <p>Quickly assign items to your crew.</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="images/icons/icon-calc.svg" alt="" class="feature-icon">
+                            <h3>Instant Who-Owes-Who</h3>
+                            <p>Get clear, automatic settlements.</p>
+                        </div>
+                        <div class="feature-item">
+                            <img src="images/icons/icon-network.svg" alt="" class="feature-icon">
+                            <h3>Group Debt Network</h3>
+                            <p>See everyone's balances across all your groups.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end of FEATURES -->
+
+            <!-- // SOCIALS // -->
+            <section class="socials">
+                <div class="content">
+                    <h2>Follow Along</h2>
+                    <p>Tips, updates, and behind the scenes.</p>
+                    <ul class="socials-list list-reset">
+                        <li><a href="#"><img src="images/icons/icon-instagram.svg" alt="Instagram" class="social-icon"></a></li>
+                        <li><a href="#"><img src="images/icons/icon-x.svg" alt="X" class="social-icon"></a></li>
+                        <li><a href="#"><img src="images/icons/icon-tiktok.svg" alt="TikTok" class="social-icon"></a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- end of SOCIALS -->
+
+        </main>
+
+        <!-- // FOOTER // -->
+        <footer class="bg-primary">
+            <!-- This footer is split into 3 columns: app name, help links, and copyright -->
+            <div class="content footer-content">
+                <div class="footer-brand">
+                    <p class="logo"><img src="images/icons/brand-mark-white.svg" alt="" class="brand-mark">You Owe Me 15</p>
+                    <p>Less math. More time together.</p>
+                </div>
+                <!-- Same links as the header nav -->
+                <nav>
+                    <ul class="list-reset">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-legal">
+                    <p>Let's stay connected.</p>
+                    <p class="copyright">&copy; 2026 You Owe Me 15. All rights reserved.</p>
+                    <p><a href="#">Privacy</a> | <a href="#">Terms</a></p>
+                </div>
+            </div>
+        </footer>
+        <!-- end of FOOTER -->
+
+    </body>
+</html>
