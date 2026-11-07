@@ -86,7 +86,7 @@ app.post("/login",function(req,res)
 			if (result.length === 0)
 			{
 				console.log('results of the query',result);
-				res.send('<p>Your password or username are incorrect<br> <a href="login.html">Login </a> here </p> ');	
+				res.send('<p>The login credentials were incorrect<br> <a href="login.html">Login </a> here </p> ');
 			}
 			else
 				res.send(`<p>You have logged in successfully ${username}</p>`);
