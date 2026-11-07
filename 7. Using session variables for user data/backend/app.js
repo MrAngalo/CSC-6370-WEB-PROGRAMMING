@@ -8,13 +8,13 @@ app.use(express.static(__dirname + "/../frontend"));
 
 // Creates a session for each visitor, the session id is stored in a cookie
 app.use(session({
-	secret: process.env.SESSION_SECRET, // Used to sign the session id cookie
-	resave: false, // Does not save the session again if nothing changed
-	saveUninitialized: false, // Does not create a session until something is stored in it
+	secret: process.env.SESSION_SECRET,
+	resave: false,
+	saveUninitialized: false,
 	cookie: {
-		maxAge: 60000 * 60, // Cookie expires after 1 hour, in milliseconds
-		httpOnly: true, // Javascript in the browser cannot read the cookie
-		secure: false // Set to true when the site uses HTTPS
+		maxAge: 60000 * 60,
+		httpOnly: true,
+		secure: false
 	}
 }));
 
@@ -54,7 +54,8 @@ app.post("/register",function(req,res)
 	let sql = "insert into user (username,email,password) values (?,?,?)"; // The ? are filled in by the array below, this prevents sql injection
 	conn.query(sql,[username,email,passwordHashed],function(err,result)
 	{
-		if (err) // Happens when the username is taken or too long
+		// Happens when the username is taken or too long
+		if (err)
 		{
 			console.log("There was an error inserting a user",err);
 			res.send('<p>There was an error registering<br> <a href="register.html">Try again</a></p>');
@@ -81,7 +82,8 @@ app.post("/login",function(req,res)
 		}
 		else
 		{
-			if (result.length === 0) // No rows means the username or password did not match
+			// No rows means the username or password did not match
+			if (result.length === 0)
 			{
 				console.log('results of the query',result);
 				res.send('<p>The login credentials were incorrect<br> <a href="login.html">Login </a> here </p> ');
@@ -123,4 +125,5 @@ app.get("/logout",function(req,res)
 
 
 
-app.listen(Number(process.env.PORT) || 3000); // Starts the server on the port from .env, or 3000 if it is not set
+// Starts the server on the port from .env, or 3000 if it is not set
+app.listen(Number(process.env.PORT) || 3000);
