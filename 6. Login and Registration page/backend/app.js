@@ -19,7 +19,7 @@ const conn = mysql.createConnection({
 // Password hash settings
 const hashRounds = 100;
 const hashLength= 64;
-const salt = "salt";
+const salt = process.env.PASSWORD_SALT;
 
 // Test connection to the database
 conn.connect(function(err)
