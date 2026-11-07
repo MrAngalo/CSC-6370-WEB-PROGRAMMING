@@ -29,10 +29,10 @@ conn.connect(function(err)
 	
 });
 
-//
+/*
 app.post("/signup",function(req,res)
 {
-	let plainPass = req.body.password; 
+	let plainPass = req.body.password;
 	let username = req.body.userName;
 	let fname = req.body.fname;
 	let lname = req.body.lname;
@@ -46,8 +46,9 @@ app.post("/signup",function(req,res)
 		else
 			res.send("<p> You have inserted "+fname+" "+lname+" "+ "into " + result.affectedRows+' row <a href="login.html">Login </a> here </p>');
 	});
-	
+
 });
+*/
 
 app.post("/login",function(req,res)
 {
