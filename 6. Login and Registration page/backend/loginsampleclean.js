@@ -50,6 +50,25 @@ app.post("/signup",function(req,res)
 });
 */
 
+app.post("/register",function(req,res)
+{
+	let username = req.body.username;
+	let email = req.body.email;
+	let password = req.body.password;
+	let passwordHashed = crypt.pbkdf2Sync(password,salt, hashRounds, hashLength, 'sha512').toString(`hex`);
+	let sql = "insert into user (username,email,password) values (?,?,?)";
+	conn.query(sql,[username,email,passwordHashed],function(err,result)
+	{
+		if (err)
+		{
+			console.log("There was an error inserting a user",err);
+			res.send('<p>There was an error registering<br> <a href="register.html">Try again</a></p>');
+		}
+		else
+			res.send('<p>You have successfully registered<br> <a href="login.html">Login</a> here</p>');
+	});
+});
+
 app.post("/login",function(req,res)
 {
 	let plainPass = req.body.password; 
