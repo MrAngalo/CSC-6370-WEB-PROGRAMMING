@@ -87,8 +87,37 @@ app.post("/login",function(req,res)
 				res.send('<p>The login credentials were incorrect<br> <a href="login.html">Login </a> here </p> ');
 			}
 			else
-				res.send(`<p>You have logged in successfully ${username}</p>`);
+			{
+				// Saves the user in the session so we can remember user is authenticated
+				req.session.user = { username: result[0].username, email: result[0].email };
+				res.send(`<p>You have logged in successfully ${username}<br> Visit your <a href="/profile">Profile</a></p>`);
+			}
 		}
+	});
+});
+
+// Shows the logged in user's information, read from the session
+app.get("/profile",function(req,res)
+{
+	// If there is no user, nobody is logged in
+	if (!req.session.user)
+		res.send('<p>You are not logged in<br> <a href="login.html">Login</a> here</p>');
+	else
+		res.send(`<p>Hi ${req.session.user.username}<br> Your email is ${req.session.user.email}<br> <a href="/logout">Logout</a></p>`);
+});
+
+// Destroys the session, which logs the user out
+app.get("/logout",function(req,res)
+{
+	req.session.destroy(function(err)
+	{
+		if (err)
+		{
+			console.log("There was an error logging out",err);
+			res.send('<p>There was an error logging out<br> <a href="/profile">Back to profile</a></p>');
+		}
+		else
+			res.send('<p>You have logged out successfully<br> <a href="login.html">Login</a> here</p>');
 	});
 });
 
