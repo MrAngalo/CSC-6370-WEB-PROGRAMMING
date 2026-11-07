@@ -1,3 +1,4 @@
+/*
 const express = require("express"); 
 const crypt = require("crypto");
 const app = express(); 
@@ -108,3 +109,4 @@ app.post("/login",function(req,res)
 
 
 app.listen(3000);
+*/

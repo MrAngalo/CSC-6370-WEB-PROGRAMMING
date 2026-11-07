@@ -1,3 +1,4 @@
+/*
 const express = require("express");
 const app = express();
 const session = require("express-session");
@@ -46,3 +47,4 @@ app.get("/logout", (req, res) =>
 });
 
 app.listen(PORT, () => console.log(`Server at ${PORT}`));
+*/
