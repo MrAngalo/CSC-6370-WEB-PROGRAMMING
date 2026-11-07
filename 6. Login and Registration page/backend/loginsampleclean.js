@@ -57,7 +57,7 @@ app.post("/login",function(req,res)
 	let saltVal="salt";
 	const pass = crypt.pbkdf2Sync(plainPass,
         saltVal, hashRounds, hashLength, 'sha512').toString(`hex`);
-	let sql = 'select * from student where user_id=? and password = ?';
+	let sql = 'select * from user where username=? and password = ?';
 	conn.query(sql,[username,pass],function(err,result)
 	{
 		if(err)
