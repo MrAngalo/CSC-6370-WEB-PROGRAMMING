@@ -2,7 +2,9 @@
 <html>
 <head></head>
 <body>
+	<!-- This form sends the username and password to the /login route on the server -->
 	<form action ="/login" method="POST">
+		<!-- The name attribute is what the server reads in req.body -->
 		<label for = "username">Username</label>
 		<input type="text" name= "username" id="username" size = "20"/><br>
 		<label for = "password">Password</label>

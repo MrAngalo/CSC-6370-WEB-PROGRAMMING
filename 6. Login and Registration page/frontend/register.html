@@ -3,11 +3,15 @@
 <head></head>
 <body>
 	<H2>Registration Form</H2>
+	<!-- This form sends the username, email and password to the /register route on the server -->
 	<form action ="/register" method="POST">
+		<!-- The name attribute is what the server reads in req.body -->
 		<label for = "username">Username</label><br>
 		<input type="text" name= "username" id="username" size = "20"/><br>
+		<!-- type="email" makes the browser check the email format before sending -->
 		<label for = "email">E-mail</label><br>
 		<input type="email" name= "email" id="email" size = "40"/><br>
+		<!-- type="password" hides the characters as they are typed -->
 		<label for = "password">Password</label><br>
 		<input type="password" name= "password" id="password" size = "30"/><br>
 		<input type = "submit"/>
