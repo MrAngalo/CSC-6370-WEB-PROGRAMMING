@@ -29,27 +29,6 @@ conn.connect(function(err)
 	
 });
 
-/*
-app.post("/signup",function(req,res)
-{
-	let plainPass = req.body.password;
-	let username = req.body.userName;
-	let fname = req.body.fname;
-	let lname = req.body.lname;
-	let gpa = Number(req.body.gpa);
-	hashedPass = crypt.pbkdf2Sync(plainPass,salt, hashRounds, hashLength, 'sha512').toString(`hex`);
-	let sql = "insert into student (fname,lname,gpa,user_id,password,salt) values (?,?,?,?,?,?)";
-	conn.query(sql,[fname,lname,gpa,username,hashedPass,salt],function(err,result)
-	{
-		if (err)
-			console.log("There was an error inserting a student",err)
-		else
-			res.send("<p> You have inserted "+fname+" "+lname+" "+ "into " + result.affectedRows+' row <a href="login.html">Login </a> here </p>');
-	});
-
-});
-*/
-
 app.post("/register",function(req,res)
 {
 	let username = req.body.username;
@@ -73,14 +52,16 @@ app.post("/login",function(req,res)
 {
 	let plainPass = req.body.password; 
 	let username = req.body.username;
-	let saltVal="salt";
 	const pass = crypt.pbkdf2Sync(plainPass,
-        saltVal, hashRounds, hashLength, 'sha512').toString(`hex`);
+        salt, hashRounds, hashLength, 'sha512').toString(`hex`);
 	let sql = 'select * from user where username=? and password = ?';
 	conn.query(sql,[username,pass],function(err,result)
 	{
 		if(err)
-			res.send(err);
+		{
+			console.log("There was an error logging in",err);
+			res.send('<p>There was an error logging in<br> <a href="login.html">Try again</a></p>');
+		}
 		else
 		{
 			if (result.length === 0)
