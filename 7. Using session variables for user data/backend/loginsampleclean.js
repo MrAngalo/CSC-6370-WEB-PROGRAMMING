@@ -1,9 +1,22 @@
 process.loadEnvFile(__dirname + "/.env");
 const express = require("express");
 const crypt = require("crypto");
+const session = require("express-session");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/../frontend"));
+
+// Creates a session for each visitor, the session id is stored in a cookie
+app.use(session({
+	secret: process.env.SESSION_SECRET, // Used to sign the session id cookie
+	resave: false, // Does not save the session again if nothing changed
+	saveUninitialized: false, // Does not create a session until something is stored in it
+	cookie: {
+		maxAge: 60000 * 60, // Cookie expires after 1 hour, in milliseconds
+		httpOnly: true, // Javascript in the browser cannot read the cookie
+		secure: false // Set to true when the site uses HTTPS
+	}
+}));
 
 const mysql = require("mysql2");
 
