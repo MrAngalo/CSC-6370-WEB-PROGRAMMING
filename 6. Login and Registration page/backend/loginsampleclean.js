@@ -3,7 +3,7 @@ const express = require("express");
 const crypt = require("crypto");
 const app = express(); 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/../frontend")); //serves the html pages from the frontend folder
 
 const mysql = require("mysql2");
 const conn = mysql.createConnection({
